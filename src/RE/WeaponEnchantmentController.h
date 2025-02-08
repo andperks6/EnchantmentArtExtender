@@ -1,12 +1,15 @@
-#pragma once
-
 #include "RE/N/NiSmartPointer.h"
 
+
+#pragma once
 namespace RE
 {
 	class Actor;
 	class ActorMagicCaster;
 	class TESObjectWEAP;
+
+	#ifndef WeaponEnchantmentController_H
+	#define WeaponEnchantmentController_H
 
 	class WeaponEnchantmentController : public ReferenceEffectController
 	{
@@ -39,5 +42,6 @@ namespace RE
 		bool                  firstPerson;   // 38
 		std::byte             pad39[7];      // 39
 	};
+#endif
 	static_assert(sizeof(WeaponEnchantmentController) == 0x40);
 }

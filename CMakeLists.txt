@@ -17,9 +17,11 @@ list(APPEND CMAKE_MODULE_PATH
 )
 include(SKSEPlugin)
 set(SKSE_USE_XBYAK ON)
+set(SKSE_SUPPORT_VR ON)
+set(SKSE_COMMONLIBSSE_PATH "external/CommonLibVR")
 
-add_compile_definitions(SKYRIM_AE)
-add_compile_definitions(SKYRIM_SUPPORT_AE)
+add_compile_definitions(SKYRIMVR)
+add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 add_compile_definitions(SKSE_SUPPORT_XBYAK)
 
 if (BUILD_TEST)
@@ -45,7 +47,7 @@ target_link_libraries(
 			JsonCpp::JsonCpp
 )
 
-set_target_properties(CommonLibSSE PROPERTIES
+set_target_properties(CommonLibVR PROPERTIES
 	FOLDER External
 )
 
