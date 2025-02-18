@@ -215,7 +215,7 @@ function(SKSEPlugin_Add TARGET)
 	target_link_libraries(
 		"${TARGET}"
 		PRIVATE
-			CommonLibSSE::CommonLibSSE
+			CommonLibVR::CommonLibVR
 			spdlog::spdlog
 	)
 
